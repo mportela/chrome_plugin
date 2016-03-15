@@ -1,0 +1,17 @@
+{
+  "name": "Url Inform",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Contextualised information on tab opened",
+  "content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "js": [ "lookup.js" ],
+    "run_at": "document_end",
+    "all_frames": false
+  }],
+  "permissions": [
+    "tabs",
+    "http://dictionary-lookup.org/",
+    "http://commons.wikimedia.org/"
+  ]
+}
